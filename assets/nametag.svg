@@ -1,0 +1,27 @@
+<svg width="321" height="317" viewBox="0 0 321 317" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g filter="url(#filter0_d_316_9075)">
+<path d="M20 24H281C292.046 24 301 32.9543 301 44V277C301 290.255 290.255 301 277 301H44C30.7452 301 20 290.255 20 277V24Z" fill="{{color}}"/>
+<path d="M21 25H281C291.493 25 300 33.5066 300 44V277C300 289.703 289.703 300 277 300H44C31.2974 300 21 289.703 21 277V25Z" stroke="#181818" stroke-width="2"/>
+</g>
+<path d="M15 15H269C279.493 15 288 23.5066 288 34V269C288 280.598 278.598 290 267 290H34C23.5066 290 15 281.493 15 271V15Z" fill="white" stroke="#181818" stroke-width="2"/>
+<text x="47%" y="250" text-anchor="middle" fill="#181818" xml:space="preserve" style="white-space: pre" font-family="PP Object Sans" font-size="32" font-weight="500" letter-spacing="-0.05em">
+{{nickname}}
+</text>
+<circle cx="151.5" cy="127.5" r="76.5" fill="url(#pattern0)" stroke="#181818" stroke-width="2"/>
+<defs>
+<filter id="filter0_d_316_9075" x="0" y="0" width="321" height="317" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="-4"/>
+<feGaussianBlur stdDeviation="10"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.16 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_316_9075"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_316_9075" result="shape"/>
+</filter>
+<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_316_9075" transform="scale(0.000555556)"/>
+</pattern>
+<image id="image0_316_9075" width="1800" height="1800" xlink:href="data:image/png;base64,{{profileImageData}}" />
+</defs>
+</svg>
