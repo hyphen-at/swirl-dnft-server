@@ -1,6 +1,6 @@
 # Swirl dNFT SVG Renderer
 
-See production deployment here: https://swirl.deno.land/
+See production deployment here: https://swirl.deno.dev/
 
 The SVG render server for Swirl. Renders SVG with given parameters. If any external images found, it fetches and embed into the SVG so it can be rendered anywhere.
 
