@@ -80,7 +80,7 @@ router.get("/dnft/moment.svg", async (ctx) => {
 });
 
 router.get('/assets/calendar.svg', async (ctx) => {
-  const { day = '21' } = helpers.getQuery(ctx);
+  const { day = '5' } = helpers.getQuery(ctx);
   ctx.response.headers.set("Content-Type", "image/png");
   ctx.response.body = await render(renderSvgTemplate(calendarIconTemplate, { day }));
 });
