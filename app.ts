@@ -6,6 +6,7 @@ import {
 } from "https://deno.land/x/oak@v11.1.0/mod.ts";
 import { encode as encodeBase64 } from "https://deno.land/std@0.194.0/encoding/base64.ts";
 import oakLogger from "https://deno.land/x/oak_logger@1.0.0/mod.ts";
+import { render } from "https://deno.land/x/resvg_wasm/mod.ts";
 
 function decodeHex(hexString: string): string {
   if (hexString.length % 2 !== 0) {
@@ -19,9 +20,10 @@ function decodeHex(hexString: string): string {
   return new TextDecoder().decode(bytes);
 }
 
-const [nametagSvgTemplate, momentTemplate] = await Promise.all([
+const [nametagSvgTemplate, momentTemplate, calendarIconTemplate] = await Promise.all([
   Deno.readTextFile("./assets/nametag.svg"),
   Deno.readTextFile("./assets/moment.svg"),
+  Deno.readTextFile("./assets/calendar-icon.svg"),
 ]);
 
 function renderSvgTemplate(template: string, args: Record<string, string>) {
@@ -76,6 +78,13 @@ router.get("/dnft/moment.svg", async (ctx) => {
     metAt: new Date(Number(metAt) * 1000).toLocaleDateString("en-US"),
   });
 });
+
+router.get('/assets/calendar.svg', async (ctx) => {
+  const { day = '21' } = helpers.getQuery(ctx);
+  ctx.response.headers.set("Content-Type", "image/png");
+  ctx.response.body = await render(renderSvgTemplate(calendarIconTemplate, { day }));
+});
+
 
 const app = new Application();
 app.use(oakCors());
